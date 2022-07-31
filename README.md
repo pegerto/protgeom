@@ -59,7 +59,7 @@ ax.scatter3D(mol_7q0b.cords[:,0], mol_7q0b.cords[:,1], mol_7q0b.cords[:,2])
 ```
 
     
-![png](doc/img/scatter3D.png)
+![png](docs/img/scatter3D.png)
     
 
 
