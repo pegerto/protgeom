@@ -1,0 +1,27 @@
+[project]
+name = "protgeom"
+version = "0.0.1"
+authors = [
+  { name="Pegerto Fernandez", email="pegerto.fernandez@brunel.ac.uk" },
+]
+description = "A python package for geometrical learning on protein structures"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pegerto/protgeom"
+"Bug Tracker" = "https://github.com/pegerto/protgeom/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
