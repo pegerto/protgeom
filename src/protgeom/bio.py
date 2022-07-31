@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 import string
-from unicodedata import name
 from numpy import ndarray
 
 
@@ -10,7 +9,12 @@ class Protein:
     """
     num_atoms: int
     cords: ndarray
+    caphas: list[(int,int)]
     name: string = 'unknown'
 
     def __str__(self):
-        return name
+        return self.name
+    
+    @property
+    def calpha_cords(self) -> ndarray:
+        return self.cords[[calpha[0] for calpha in self.caphas],:]
