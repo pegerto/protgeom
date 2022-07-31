@@ -28,11 +28,15 @@ ATOM     17  CA  GLY A  18     -12.021   6.630  14.259  1.00 15.04           C
 
 def test_parsePDBFile():
     prot = parsePDBFile(example_pdb_file()) 
-
     assert prot.num_atoms == 17
-    print(prot.cords)
     assert prot.cords[2,0] == -9.405 # atom 3 position x
     assert prot.cords[5,2] == 20.508 # atom 6 possition z
+
+
+def test_parsePDBFileCAlphas():
+    prot = parsePDBFile(example_pdb_file()) 
+    assert prot.caphas == [(1, 15), (9, 16), (16, 17)] 
+    assert prot.calpha_cords[1,0] == -10.351 # second carbon alpha X cordinate
 
 
 def test_fetchPDB():
@@ -47,4 +51,4 @@ def test_fetchPDB_with_capital_letters():
 
 def test_fetchPDB_not_exiting_molecule():
     with pytest.raises(RuntimeError):
-        fetchPDB('XXXXXX')
+        fetchPDB('NOEXISTS')
