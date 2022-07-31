@@ -46,4 +46,5 @@ def parsePDBFile(pdb_f, name='unknown'):
 
     cords_folded = cords.reshape(-1,3)
     atom_num = cords_folded.shape[0]
-    return Protein(atom_num, cords_folded, calphas, name)
+    sorted_caphas = sorted(calphas,key=lambda x: x[1])
+    return Protein(atom_num, cords_folded, sorted_caphas, name)
