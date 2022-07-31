@@ -1,13 +1,13 @@
 [project]
 name = "protgeom"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="Pegerto Fernandez", email="pegerto.fernandez@brunel.ac.uk" },
 ]
 description = "A python package for geometrical learning on protein structures"
 readme = "README.md"
 license = { file="LICENSE" }
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
@@ -16,6 +16,12 @@ classifiers = [
     "Topic :: Scientific/Engineering",
     "Topic :: Scientific/Engineering :: Bio-Informatics",
     "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+[tool.poetry]
+# ...
+packages = [
+    { include = "protgeom", from = "src" },
 ]
 
 [project.urls]
