@@ -27,4 +27,8 @@ ATOM     17  CA  GLY A  18     -12.021   6.630  14.259  1.00 15.04           C
 
 def test_pdb_read():
     prot = parsePDBFile(example_pdb_file()) 
+
     assert prot.num_atoms == 17
+    print(prot.cords)
+    assert prot.cords[2,0] == -9.405 # atom 3 position x
+    assert prot.cords[5,2] == 20.508 # atom 6 possition z
