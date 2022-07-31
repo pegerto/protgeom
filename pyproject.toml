@@ -1,6 +1,6 @@
 [project]
 name = "protgeom"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="Pegerto Fernandez", email="pegerto.fernandez@brunel.ac.uk" },
 ]
