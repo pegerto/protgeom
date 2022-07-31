@@ -4,4 +4,4 @@ from dataclasses import dataclass
 class Protein:
     """ Define a protein with the inner structure
     """
-    name: str
+    num_atoms: int
