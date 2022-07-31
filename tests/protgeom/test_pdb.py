@@ -26,4 +26,5 @@ ATOM     17  CA  GLY A  18     -12.021   6.630  14.259  1.00 15.04           C
     """)
 
 def test_pdb_read():
-    assert parsePDBFile(example_pdb_file()) == Protein(17)
+    prot = parsePDBFile(example_pdb_file()) 
+    assert prot.num_atoms == 17
