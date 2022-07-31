@@ -9,7 +9,7 @@ class Protein:
     """
     num_atoms: int
     cords: ndarray
-    caphas: list
+    calphas: list
     name: string = 'unknown'
 
     def __str__(self):
@@ -17,4 +17,4 @@ class Protein:
     
     @property
     def calpha_cords(self) -> ndarray:
-        return self.cords[[calpha[0] for calpha in self.caphas],:]
+        return self.cords[[calpha[0] for calpha in self.calphas],:]
