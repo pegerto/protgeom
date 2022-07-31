@@ -9,7 +9,7 @@ class Protein:
     """
     num_atoms: int
     cords: ndarray
-    caphas: list[(int,int)]
+    caphas: list
     name: string = 'unknown'
 
     def __str__(self):
