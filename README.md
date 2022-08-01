@@ -4,7 +4,8 @@ Python package for geometrical learning on protein structures.
 
 ## Install
 
-To install this library please use 
+To install this library, as is under development, we need to use testpipy index, it can be install with 
+a simple command: 
 
 ```
 pip install -i https://test.pypi.org/simple/ protgeom -U
@@ -13,19 +14,14 @@ pip install -i https://test.pypi.org/simple/ protgeom -U
 ## Examples
 
 
-Fetch protein structure
+There is a helper to obtain a protein by name and parse the atomic structure
 ```python
 mol_7q0b = fetchPDB('7Q0B')
-```
-
-Look at the number of atoms.
-```python
 mol_7q0b.num_atoms
 ```
+    21148
 
-21148
-
-Read the atom cordinates in a 3D cartesian plane with unit defined in Å 
+Atom positons are read as 3D cordines into a cartesian plance with Å as unit. 
 
 ```python
 mol_7q0b.cords
@@ -39,13 +35,9 @@ mol_7q0b.cords
            [209.865, 130.913, 136.954]])
 
 
-We can work with cordinates:
- 
-
+Once the libary loaded the 3D structure we can easily work with the molecule vectors:
 
 ```python
-%matplotlib inline
-
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 ```
@@ -58,16 +50,5 @@ ax = plt.axes(projection='3d')
 ax.scatter3D(mol_7q0b.cords[:,0], mol_7q0b.cords[:,1], mol_7q0b.cords[:,2])
 ```
 
-    
 ![png](docs/img/scatter3D.png)
     
-
-
-## Release Processs 
-
-Release process is not currently automated, I will enable a github action workflow as soon the project get some additional commiters.
-
-```
-python3 -m build
-python3 -m twine upload --repository testpypi dist/*
-```
