@@ -2,9 +2,6 @@ from dataclasses import dataclass
 import string
 from numpy import ndarray
 
-from protgeom.geom import contact_map
-
-
 @dataclass(frozen=True)
 class Protein:
     """ Define a protein as a biological molecule
@@ -20,6 +17,3 @@ class Protein:
     @property
     def calpha_cords(self) -> ndarray:
         return self.cords[[calpha[0] for calpha in self.calphas],:]
-
-    def contact(self, cutoff):
-        contact_map(self.calphas, cutoff)
